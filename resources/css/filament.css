@@ -1,0 +1,8 @@
+@import '../../vendor/filament/filament/resources/css/app.css';
+
+
+.filament-header-heading {
+    font-size: 1.5rem;
+    color: rgb(12, 104, 65);
+}
+
