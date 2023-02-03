@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\CompraProductoResource\Pages;
 use App\Filament\Resources\CompraProductoResource\RelationManagers;
 use App\Models\CompraProducto;
+use App\Traits\useBaseMethods;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Resources\Form;
@@ -16,12 +17,14 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class CompraProductoResource extends Resource
 {
+    use useBaseMethods;
     protected static ?string $model = CompraProducto::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
     public static function form(Form $form): Form
     {
+
         return $form
             ->schema([
                 Card::make()

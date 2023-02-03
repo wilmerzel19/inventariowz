@@ -78,6 +78,20 @@ trait useBaseMethods{
 
 
         }
+         protected static function getNavigationBadge(): ?string //badge
+    {
+        return static::getModel()::count();
+    }
+
+    protected static function getNavigationBadgeColor(): ?string
+    {
+        return static::getModel()::count() < 1 ? 'danger' : 'primary';
+    }
+
+    protected static function getActiveNavigationIcon(): string
+    {
+        return 'heroicon-s-arrow-circle-right';
+    }
         }
 
 

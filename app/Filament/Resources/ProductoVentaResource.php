@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ProductoVentaResource\Pages;
 use App\Filament\Resources\ProductoVentaResource\RelationManagers;
 use App\Models\ProductoVenta;
+use App\Traits\useBaseMethods;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Resources\Form;
@@ -16,6 +17,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ProductoVentaResource extends Resource
 {
+    use useBaseMethods;
     protected static ?string $model = ProductoVenta::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';

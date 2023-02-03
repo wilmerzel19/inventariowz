@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\CompraResource\Pages;
 use App\Filament\Resources\CompraResource\RelationManagers;
 use App\Models\Compra;
+use App\Traits\useBaseMethods;
 use Filament\Forms\Components\Card;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -16,6 +17,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class CompraResource extends Resource
 {
+    use useBaseMethods;
     protected static ?string $model = Compra::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';

@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ProveedorResource\Pages;
 use App\Filament\Resources\ProveedorResource\RelationManagers;
 use App\Models\Proveedor;
+use App\Traits\useBaseMethods;
 use Filament\Forms\Components\Card;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -16,6 +17,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ProveedorResource extends Resource
 {
+    use useBaseMethods;
     protected static ?string $model = Proveedor::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
